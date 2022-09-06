@@ -1,0 +1,118 @@
+* {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    width: 1000px;
+    height: 600px;
+    background-color: darkgrey;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1%;
+}
+
+#background {
+    position: absolute;
+}
+
+#nuvem1 {
+    top: 5px;
+    animation-delay: 1s;
+}
+
+#nuvem2 {
+    top: 90px;
+    animation-delay: 5s;
+}
+
+.nuvem {
+    width: 380px;
+    height: 240px;
+    right: -40%;
+    position: absolute;
+    animation: nuvem 7s linear infinite;
+}
+
+@keyframes nuvem {
+    from {
+        right: -40%
+    }
+    to {
+        right: 100%
+    }
+}
+
+#obstaculo {
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    bottom: 80px;
+    left: 100%;
+    animation: obstaculoRunning 4s linear 0s infinite;
+    animation-play-state: paused;
+}
+
+@keyframes obstaculoRunning {
+    from {
+        right: -5%
+    }
+    to {
+        left: -5%
+    }
+}
+
+#mario {
+    width: 140px;
+    height: 120px;
+    /* background-color: green; */
+    position: absolute;
+    left: 300px;
+    bottom: 80px;
+}
+
+.jump {
+    animation: animation_jump 0.9s linear;
+}
+
+@keyframes animation_jump {
+    0% {
+        bottom: 80px
+    }
+    40% {
+        bottom: 200px
+    }
+    50% {
+        bottom: 200px
+    }
+    60% {
+        bottom: 200px
+    }
+    100% {
+        bottom: 80px
+    }
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    border: 0px;
+    border-radius: 5%;
+}
+
+#restart {
+    display: none;
+}
